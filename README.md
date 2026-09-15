@@ -1,10 +1,10 @@
 # Sistema de Gerenciamento e Compra de estoque de alimentos
 
-O nosso sistema atua como uma ferramenta para estabelecimentos como mercados, restaurantes e hotéis que precisam lidar com um fluxo constante de alimentos entrando e saindo em seu estoque. 
+Esse projeto consiste sistema feito em C que atua como uma ferramenta para estabelecimentos como mercados, restaurantes e hotéis que precisam lidar com um fluxo constante de alimentos entrando e saindo em seu estoque. 
 
 ---
 
-## Finalidade e Utilização
+## Descrição e Finalidade
 Para auxiliar com esse controle de estoque, o nosso sistema possui duas funções principais: gerenciar o estoque e gerenciar as compras.
 
 Dentro dessas funções, existe uma série de funcionalidades 
@@ -14,4 +14,5 @@ Dessa forma, o nosso sistema busca solucionar problemas de falta
 ou excesso de determinados produtos, além de permitir um maior controle de gastos com a aquisição de alimentos.
 
 
+## Fluxo de Utilização do Sistema
 

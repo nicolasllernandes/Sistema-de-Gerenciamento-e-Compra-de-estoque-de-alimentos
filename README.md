@@ -15,4 +15,30 @@ ou excesso de determinados produtos, além de permitir um maior controle de gast
 
 
 ## Fluxo de Utilização do Sistema
+1. Ao iniciar aparecerá um menu com essas opções:
+   - `1 - Gestão de Controle de Estoque`
+   - `2 - Gestão de Fornecedores e Compra`
+   - `3 - Relatórios e Indicadores`
+
+Cada uma dessas opções irá abrir 2 - 3 opções mais especificas que abrangem as 3 opções acima
+
+
+
+
+1. Gestão de Controle de Estoque
+   - `1 - Entradas / Saídas`
+   - `2 - Quantidade em Estoque`
+   - `3 - Controle de Validade`
+2. Gestão de Fornecedores e Compra
+   - `1 - Cadastro de Fornecedores`
+   - `2 - Cotação de Preços`
+3. Relatórios e Indicadores
+   - `1 - Custo de Mercadorias`
+   - `2 - Desperdício de Alimentos`
+
+Cada uma dessas opções irá abrir o painel respectivo para a sua utilização (*AINDA NÃO FEITO*)
+
+
+## Fluxograma do Sistema
+![Fluxograma Principal](https://github.com/nicolasllernandes/Sistema-de-Gerenciamento-e-Compra-de-estoque-de-alimentos/blob/main/fluxograma.png)
 

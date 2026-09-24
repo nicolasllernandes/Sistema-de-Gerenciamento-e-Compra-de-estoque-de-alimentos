@@ -50,6 +50,8 @@ int main(int argc, char *argv[]) {
                         printf("ENTRADAS / SAIDAS\n ENTRADAS:\n ARROZ: 25\n FEIJAO: 32\n\n SAIDAS: \n AGUA: 10\n ");
                         printf(novoitem1);
                         printf(" %d", qntditem1);
+					}
+				}
 			}
 			
 			

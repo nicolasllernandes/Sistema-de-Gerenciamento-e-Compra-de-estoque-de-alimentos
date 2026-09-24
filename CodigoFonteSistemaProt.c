@@ -16,9 +16,9 @@ int main(int argc, char *argv[]) {
 			printf("1 - Entradas / Saidas \n2 - Quantidade em Estoque \n3 - Controle de Validade \n");
 			scanf("%d", &escolhagce);
 			
-			if (escolhagce = 1 ) {printf("ENTRADAS / SAIDAS");}
-			else if (escolhagce = 2) {printf("QUANTIDADE EM ESTOQUE");}
-			else if (escolhagce = 3) {printf("CONTROLE DE VALIDADE");}	 
+			if (escolhagce == 1 ) {printf("ENTRADAS / SAIDAS");}
+			else if (escolhagce == 2) {printf("QUANTIDADE EM ESTOQUE");}
+			else if (escolhagce == 3) {printf("CONTROLE DE VALIDADE");}	 
 			break;	
 		
 			
@@ -27,8 +27,8 @@ int main(int argc, char *argv[]) {
 			printf("1 - Cadastro de Fornecedores \n2 - Cotacao de Precos \n");
 			scanf("%d", &escolhagf);
 			
-			if (escolhagf = 1) {printf("CADASTRO DE FORNECEDORES");}
-			else if (escolhagf = 2) {printf("COTACAO DE PRECOS");}
+			if (escolhagf == 1) {printf("CADASTRO DE FORNECEDORES");}
+			else if (escolhagf == 2) {printf("COTACAO DE PRECOS");}
 			break;
 		
 		
@@ -37,8 +37,8 @@ int main(int argc, char *argv[]) {
 			printf("1 - Custo de mercadorias \n2 - Desperdicio de Alimentos \n");
 			scanf("%d", &escolhari);
 			
-			if (escolhari = 1) {printf("CUSTO DE MERCADORIAS");}
-			else if (escolhari = 2) {printf("DESPERDICIO DE ALIMENTOS");}
+			if (escolhari == 1) {printf("CUSTO DE MERCADORIAS");}
+			else if (escolhari == 2) {printf("DESPERDICIO DE ALIMENTOS");}
 			break;
 			
 	}

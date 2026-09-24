@@ -54,7 +54,6 @@ int main(int argc, char *argv[]) {
 				}
 			}
 			
-			
 			//1.2
 			else if (escolhagce == 2){
 				printf("\nQUANTIDADE EM ESTOQUE\n");

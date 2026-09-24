@@ -11,6 +11,10 @@ int main(int argc, char *argv[]) {
 	
 	char fornecedornome[100];
 	double fornecedorcnpj;
+
+	char novoitem1[20];
+    char novoitem2[20];
+    int qntditem1, qntditem2, entradasaidan;
 	
 	printf("Selecione a opcao que deseja realizar: \n1 - Gestao de Controle de Estoque \n2 - Gestao de Fornecedores \n3 - Relatorios e Indicadores\n");
 	scanf("%c", &escolhamenuprincipal);
@@ -24,7 +28,28 @@ int main(int argc, char *argv[]) {
 			//1.1
 			if (escolhagce == 1 ){
 				printf("\nENTRADAS / SAIDAS");
-				
+				printf("\n ENTRADAS:\n ARROZ: 25\n FEIJAO: 32\n\n SAIDAS:\n AGUA: 10\n");
+                printf("\nSelecione uma opcao:\n1-Cadastrar novo item\n2-Retornar ao menu\n");
+
+                scanf("%d", &escolhaes);
+                if (escolhaes == 1){
+                    printf("Digite o nome do item: ");
+                    scanf("%s", &novoitem1);
+                    printf("Quantas unidades deste item?");
+                    scanf("%d", &qntditem1);
+                    printf("O item esta entrando ou saindo? (digite 1 para entrando e 0 para saindo)\n\n");
+                    scanf("%d", &entradasaidan);
+
+                    if (entradasaidan == 1){
+                        printf("ENTRADAS / SAIDAS\n ENTRADAS:\n ARROZ: 25\n FEIJAO: 32\n ");
+                        printf(novoitem1);
+                        printf(" %d", qntditem1);
+                        printf("\n\n SAIDAS: \n AGUA: 10\n ");
+                    }
+                    else if (entradasaidan == 0){
+                        printf("ENTRADAS / SAIDAS\n ENTRADAS:\n ARROZ: 25\n FEIJAO: 32\n\n SAIDAS: \n AGUA: 10\n ");
+                        printf(novoitem1);
+                        printf(" %d", qntditem1);
 			}
 			
 			
@@ -72,6 +97,7 @@ int main(int argc, char *argv[]) {
 			//2.2
 			else if (escolhagf == 2){
 				printf("\nCOTACAO DE PRECOS\n");
+				printf("\n PAO - RS11.30\n AGUA - RS1.50\n ARROZ - RS7.20\n FEIJAO - RS7.50");
 			} 
 			
 			break;
@@ -86,6 +112,7 @@ int main(int argc, char *argv[]) {
 			//3.1
 			if (escolhari == 1){
 				printf("\nCUSTO DE MERCADORIAS(30 dias)\n");	
+				printf("\n AGUA MINERAL - QNTD: 100 - TOTAL: RS270.65\n ARROZ BRANCO - QNTD: 50 - TOTAL: RS392.87\n FEIJAO - QNTD: 40 - TOTAL: 315.14");
 			}
 			
 			//3.2

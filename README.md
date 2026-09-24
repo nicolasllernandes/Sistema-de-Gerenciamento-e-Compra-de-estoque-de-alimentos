@@ -36,7 +36,7 @@ Cada uma dessas opções irá abrir 2 - 3 opções mais especificas que abrangem
    - `1 - Custo de Mercadorias`
    - `2 - Desperdício de Alimentos`
 
-Cada uma dessas opções irá abrir o painel respectivo para a sua utilização (*AINDA NÃO FEITO*)
+Cada uma dessas opções irá abrir o painel respectivo para a sua utilização (no momento elas abrem apenas um preview de como ficaria, com duas opções funcionando de forma correta)
 
 
 ## Fluxograma do Sistema

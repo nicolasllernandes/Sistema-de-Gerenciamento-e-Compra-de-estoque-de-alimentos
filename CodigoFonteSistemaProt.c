@@ -21,7 +21,17 @@ int gestao_controle_estoque (escolha){
         if(escolha == 1){
 
             printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %c",tabela_entrada[i][1]);
+            scanf(" %c", &tabela_entrada[i][1]);
+            
+
+
+
+
+
+            printf("Insira a quantidade desse item que entrou: \n");
+            scanf(" %c", &tabela_entrada[i][2];
+
+            
             printf("Deseja cadastrar o próximo item(1) ou parar(2)?");
             scanf("%d",&escolha);
             if (escolha==1){

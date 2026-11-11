@@ -86,7 +86,51 @@ int gestao_controle_estoque (escolha){
 
 
 int gestao_fornecedores (escolha_ge){
+		    
+    char nome_fornecedor [400][400];
+    char cnpj_fornecedor [400][8];
 
+    printf("\n##Gestao de Fornecedores e Compra##\n");
+    printf("1 - Cadastro de Fornecedores \n2 - Cotacao de Precos \n");
+    scanf("%d", &escolha);
+
+    //1.1
+    if (escolha == 1 ){
+    	int i;
+		static int ifixo = 0;
+        printf("Deseja \nCadastrar novos fornecedores(1)\nVer lista de fornecedores ja cadastrados(2)?");
+        scanf("%d", &escolha);
+
+        if(escolha == 1){
+            
+            int escolhaunica = 1;
+
+            do{
+			
+            printf("Insira o nome do fornecedor a ser contabilizado:\n");
+            scanf(" %s", nome_fornecedor[ifixo]);
+
+
+            printf("Insira o cnpj desse novo fornecedor: \n");
+            scanf("%s", &cnpj_fornecedor[ifixo]);
+
+            ifixo = ifixo + 1;
+			
+            printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
+            scanf(" %d", &escolhaunica);
+            }
+                while(escolhaunica != 2);
+
+        }
+
+        if(escolha == 2){
+			printf("\n\n#FORNECEDORES:\n");
+        	for (i = 0 ; i < ifixo; i++){
+        		printf("%s %s \n", nome_fornecedor[i],cnpj_fornecedor[i]);}
+			
+        }
+
+    }
 }
 
 

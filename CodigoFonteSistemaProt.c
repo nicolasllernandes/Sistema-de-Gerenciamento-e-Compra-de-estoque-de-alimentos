@@ -6,9 +6,9 @@ int escolha;
 
 int gestao_controle_estoque (escolha){
     
-    char nomes [200][200];
-    char tabela_entrada[200][2];
-    char tabela_saida[200][2];
+    char nomes_entrada [200][200];
+    char valores_entrada[200][8];
+    char valores_saida[200][8];
 
     printf("\n##Gestao de Controle de Estoque##\n");
     printf("1 - Entradas / Saidas \n2 - Quantidade em Estoque \n3 - Controle de Validade \n");
@@ -27,11 +27,13 @@ int gestao_controle_estoque (escolha){
             do{
 			
             printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %s", &nomes[i][j]);
+            scanf(" %s", nomes_entrada[i]);
+
+			 printf("%s\n", nomes_entrada[i]);
 
 
             printf("Insira a quantidade desse item que entrou: \n");
-            scanf(" %c", &tabela_entrada[i][2]);
+            scanf("s", &valores_entrada[i]);
 
             i = i + 1;
 			

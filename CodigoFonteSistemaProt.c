@@ -16,26 +16,25 @@ int gestao_controle_estoque (escolha){
 
     //1.1
     if (escolha == 1 ){
+		static int ifixo = 0;
+		static int jfixo = 0 ;
         printf("Deseja adicionar entrada(1), saida(2) ou Ver tabela(3)?");
         scanf("%d", &escolha);
 
         if(escolha == 1){
             
             int escolhaunica = 1;
-			int i = 0;
-			int j = 0 ;
+
             do{
 			
             printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %s", nomes_entrada[i]);
-
-			 printf("%s\n", nomes_entrada[i]);
+            scanf(" %s", nomes_entrada[ifixo]);
 
 
             printf("Insira a quantidade desse item que entrou: \n");
-            scanf("s", &valores_entrada[i]);
+            scanf("%s", &valores_entrada[ifixo]);
 
-            i = i + 1;
+            ifixo = ifixo + 1;
 			
             printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
             scanf(" %d", &escolhaunica);
@@ -48,7 +47,10 @@ int gestao_controle_estoque (escolha){
             printf("2");
         }
 
-        if(escolha == 3){
+        if(escolha == 3){printf("TABELA\n\n\n");
+        	for (i = 0 ; i < ifixo; i++){
+        		printf("%s", nomes_entrada[i]);
+			}
         }
 
 

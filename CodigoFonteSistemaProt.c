@@ -5,7 +5,8 @@ int opcao;
 int escolha;
 
 int gestao_controle_estoque (escolha){
-
+    
+    char nomes [200][200];
     char tabela_entrada[200][2];
     char tabela_saida[200][2];
 
@@ -19,24 +20,26 @@ int gestao_controle_estoque (escolha){
         scanf("%d", &escolha);
 
         if(escolha == 1){
-
-            printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %c", &tabela_entrada[i][1]);
             
-
-
-
+            int escolhaunica = 1;
+			int i = 0;
+			int j = 0 ;
+            do{
+			
+            printf("Insira o nome do item a ser contabilizado:\n");
+            scanf(" %s", &nomes[i][j]);
 
 
             printf("Insira a quantidade desse item que entrou: \n");
-            scanf(" %c", &tabela_entrada[i][2];
+            scanf(" %c", &tabela_entrada[i][2]);
 
-            
-            printf("Deseja cadastrar o próximo item(1) ou parar(2)?");
-            scanf("%d",&escolha);
-            if (escolha==1){
-
+            i = i + 1;
+			
+            printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
+            scanf(" %d", &escolhaunica);
             }
+                while(escolhaunica != 2);
+
         }
 
         if (escolha == 2){

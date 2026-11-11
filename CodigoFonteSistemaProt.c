@@ -54,7 +54,7 @@ int gestao_controle_estoque (escolha){
             scanf(" %s", nomes_saida[i2fixo]);
 
 
-            printf("Insira a quantidade desse item que entrou: \n");
+            printf("Insira a quantidade desse item que saiu: \n");
             scanf("%s", &valores_saida[i2fixo]);
 
             i2fixo = i2fixo + 1;
@@ -66,11 +66,11 @@ int gestao_controle_estoque (escolha){
         }
 
         if(escolha == 3){
-			printf("LISTA\n\n\nEntrada:\n");
+			printf("\n\n#LISTA\nEntrada:\n");
         	for (i = 0 ; i < ifixo; i++){
         		printf("%s +%s \n", nomes_entrada[i],valores_entrada[i]);}
         	
-			printf("\nSaída: \n");
+			printf("\nSaida: \n");
         	
 			for (i = 0 ; i < i2fixo; i++){
 			

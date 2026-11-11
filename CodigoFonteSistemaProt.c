@@ -7,6 +7,7 @@ int escolha;
 int gestao_controle_estoque (escolha){
     
     char nomes_entrada [200][200];
+    char nomes_saida [200] [200];
     char valores_entrada[200][8];
     char valores_saida[200][8];
 
@@ -16,9 +17,10 @@ int gestao_controle_estoque (escolha){
 
     //1.1
     if (escolha == 1 ){
+    	int i;
 		static int ifixo = 0;
-		static int jfixo = 0 ;
-        printf("Deseja adicionar entrada(1), saida(2) ou Ver tabela(3)?");
+		static int i2fixo = 0;
+        printf("Deseja adicionar entrada(1), saida(2) ou Ver lista(3)?");
         scanf("%d", &escolha);
 
         if(escolha == 1){
@@ -44,13 +46,36 @@ int gestao_controle_estoque (escolha){
         }
 
         if (escolha == 2){
-            printf("2");
+        	int escolhaunica = 1;
+
+            do{
+			
+            printf("Insira o nome do item a ser contabilizado:\n");
+            scanf(" %s", nomes_saida[i2fixo]);
+
+
+            printf("Insira a quantidade desse item que entrou: \n");
+            scanf("%s", &valores_saida[i2fixo]);
+
+            i2fixo = i2fixo + 1;
+			
+            printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
+            scanf(" %d", &escolhaunica);
+            }
+                while(escolhaunica != 2);
         }
 
-        if(escolha == 3){printf("TABELA\n\n\n");
+        if(escolha == 3){
+			printf("LISTA\n\n\nEntrada:\n");
         	for (i = 0 ; i < ifixo; i++){
-        		printf("%s", nomes_entrada[i]);
-			}
+        		printf("%s +%s \n", nomes_entrada[i],valores_entrada[i]);}
+        	
+			printf("\nSaída: \n");
+        	
+			for (i = 0 ; i < i2fixo; i++){
+			
+        		printf("%s -%s \n", nomes_saida[i], valores_saida[i]);}
+			
         }
 
 

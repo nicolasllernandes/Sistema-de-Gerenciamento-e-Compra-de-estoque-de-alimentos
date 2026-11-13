@@ -4,12 +4,21 @@
 int opcao;
 int escolha;
 
-int gestao_controle_estoque (escolha){
+char nomes[200][100];
+
+float quantidades[200];
+
+int unidades[200];
+
+int dia_validade[200];
+int mes_validade[200];
+int ano_validade[200];
+
+int total_lotes = 0;
+
+void gestao_controle_estoque (void){
     
-    char nomes_entrada [200][200];
-    char nomes_saida [200] [200];
-    char valores_entrada[200][8];
-    char valores_saida[200][8];
+    
 
     printf("\n##Gestao de Controle de Estoque##\n");
     printf("1 - Entradas / Saidas \n2 - Quantidade em Estoque \n3 - Controle de Validade \n");
@@ -18,63 +27,38 @@ int gestao_controle_estoque (escolha){
     //1.1
     if (escolha == 1 ){
     	int i;
-		static int ifixo = 0;
-		static int i2fixo = 0;
+    	
         printf("Deseja adicionar entrada(1), saida(2) ou Ver lista(3)?");
         scanf("%d", &escolha);
 
         if(escolha == 1){
+            //Cadastro de um novo lote
+            printf("Insira o nome do alimento:\n");
+            scanf("%99s", nomes[total_lotes]);
             
-            int escolhaunica = 1;
-
-            do{
-			
-            printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %s", nomes_entrada[ifixo]);
-
-
-            printf("Insira a quantidade desse item que entrou: \n");
-            scanf("%s", &valores_entrada[ifixo]);
-
-            ifixo = ifixo + 1;
-			
-            printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
-            scanf(" %d", &escolhaunica);
-            }
-                while(escolhaunica != 2);
-
+            printf("Insira a quantidade que entrou:\n");
+            scanf("%f", &quantidades[total_lotes]);
+            
+            printf("Selecione a unidade: \n");
+            printf("1 - Quilograma\n");
+            printf("2 - Litro\n");
+            printf("3- Unidade\n");
+            scanf("%d", &unidades[total_lotes]);
+            
+            printf("Insira a data de validade (DD/MM/AAAA):\n");
+			scanf("%d/%d/%d", &dia_validade[total_lotes], &mes_validade[total_lotes], &ano_validade[total_lotes]);
+           	
+           	total_lotes++;
+           	
+           	printf("\nLote cadastrado com sucesso!\n");
         }
 
         if (escolha == 2){
-        	int escolhaunica = 1;
-
-            do{
-			
-            printf("Insira o nome do item a ser contabilizado:\n");
-            scanf(" %s", nomes_saida[i2fixo]);
-
-
-            printf("Insira a quantidade desse item que saiu: \n");
-            scanf("%s", &valores_saida[i2fixo]);
-
-            i2fixo = i2fixo + 1;
-			
-            printf("Deseja cadastrar o proximo item(1) ou parar(2)?\n");
-            scanf(" %d", &escolhaunica);
-            }
-                while(escolhaunica != 2);
+        	
         }
 
         if(escolha == 3){
-			printf("\n\n#LISTA\nEntrada:\n");
-        	for (i = 0 ; i < ifixo; i++){
-        		printf("%s +%s \n", nomes_entrada[i],valores_entrada[i]);}
-        	
-			printf("\nSaida: \n");
-        	
-			for (i = 0 ; i < i2fixo; i++){
-			
-        		printf("%s -%s \n", nomes_saida[i], valores_saida[i]);}
+		
 			
         }
 
@@ -85,7 +69,7 @@ int gestao_controle_estoque (escolha){
 }
 
 
-int gestao_fornecedores (escolha_ge){
+void gestao_fornecedores (void){
 		    
     char nome_fornecedor [400][400];
     char cnpj_fornecedor [400][8];
@@ -134,7 +118,7 @@ int gestao_fornecedores (escolha_ge){
 }
 
 
-int relatorios_indicadores (escolha_ri){
+void relatorios_indicadores (void){
 
 }
 
